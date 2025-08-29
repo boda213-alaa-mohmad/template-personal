@@ -1,0 +1,84 @@
+/* NavBar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.header {
+  /* background-color: red; */
+  display: flex;
+  justify-content: space-between  ;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.logo h2 {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.75rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+  /* the under 3 properties search about it */
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: -0.5px;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  gap: 2.5rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+ul li a {
+  position: relative;
+  text-decoration: none;
+  color: #000;
+  font-size: 18px;
+  padding: 5px;
+}
+
+li a::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: #6366f1;
+  transition: width 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+li a:hover::after {
+  width: 100%;
+}
+
+/* toggle mobile button */
+.mobile-toggle {
+  /* width: 70px;
+  height: 70px;  */
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.mobile-toggle div {
+  width: 25px;
+  height: 3px;
+  background: #0f172a;
+  margin-top: 10px;
+}
+
+/* mobile  */
+@media (max-width: 767px) {
+  .mobile-toggle {
+    display: flex;
+  }
+  .listItem {
+    display: none;
+  }
+}
+
